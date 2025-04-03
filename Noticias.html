@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias de Juegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .header {
+            background-color: #ff4500;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-item img {width: 300px; /* Ancho reducido */
+            height: auto; /* Mantiene la proporción */
+            border-radius: 10px; /* Bordes redondeados opcionales */}
+        .news-item h2 {
+            color: #ff4500;
+        }
+
+             .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        iframe {
+            width: 560px;
+            height: 315px;
+            border: none; /* Quita el borde */
+        }
+         .ads {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .ads img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .promo {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .promo input, .promo button {
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+        }
+        .promo button {
+            background-color: #ff4500;
+            color: white;
+            cursor: pointer;
+        }
+            .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+    <script>
+        function enviarCorreo() {
+            let email = document.getElementById('email').value;
+            if (email) {
+                window.location.href = `mailto:tudireccion@correo.com?subject=Suscripción a Promociones&body=Quiero recibir promociones en: ${email}`;
+            } else {
+                alert('Por favor, ingrese un correo válido.');
+            }
+             }
+        function volverAPaginaPrincipal() {
+            window.location.href = 'amazon.html'; // Cambia 'index.html' por la URL de tu página principal
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="header">Noticias de Juegos</div>
+    <div class="container">
+        <div class="news-item">
+            <h2>Nintendo Switch 2: Bloqueo de importaciones y detalles del lanzamiento</h2>
+            <p>Nintendo ha anunciado que la Nintendo Switch 2 tendrá restricciones regionales para evitar importaciones especulativas. La consola llegará a España con un precio de 469,99 euros, pero en Japón habrá una versión exclusiva que costará 49.980 yenes (aproximadamente 308 euros). Esta versión japonesa solo permitirá cuentas de Nintendo de Japón y tendrá el japonés como único idioma disponible.Por otro lado, Nintendo lanzará otra versión japonesa multilingüe con un precio de 69.980 yenes. Ambas versiones estarán disponibles a partir del 5 de junio, con la apertura de reservas el 8 de abril.</p>
+            <img src="nintendoinfo.jpg" alt="Noticia 1">
+        </div>
+        <div class="news-item">
+            <h2>Grandes lanzamientos de videojuegos en 2025</h2>
+            <p>El 2025 promete ser un año cargado de títulos esperados en la industria de los videojuegos. Algunos de los juegos más destacados incluyen:</p>
+
+            <p>Grand Theft Auto 6</p>
+            <p>Ghost of Yotei</p>
+            <p>Elden Ring Nightreign</p>
+            <p>Death Stranding 2</p>
+            <p>Doom: The Dark Ages</p>
+            <p>Borderlands 4</p>
+            <p>Metroid Prime 4: Beyond</p>
+            <p>Monster Hunter Wilds</p>
+            <p>Pokémon Legends: Z-A</p>
+            <p>Slay the Spire 2</p>
+
+            <p>También llegarán nuevas IPs como Marvel 1943: Rise of Hydra, Judas, 2XKO de Riot y South of Midnight. Aunque estas            
+fechas de lanzamiento están programadas, podrían cambiar en el futuro.</p>
+
+
+
+
+    <h2>Nuevo Tráiler de Gta 6</h2>
+    <p>Este es el tráiler del nuevo videojuego anunciado:</p>
+
+    <div class="video-container">
+        <!-- Video de YouTube insertado -->
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/VIDEO_ID" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>   
+        </div>
+    </div>
+    <div class="ads">
+        <h2>Publicidad</h2>
+        <img src="https://via.placeholder.com/800x200" alt="Anuncio">
+        <p>¡Descubre las mejores ofertas en videojuegos aquí!</p>
+    </div>
+    <div class="promo">
+        <h2>Recibe Promociones</h2>
+        <p>Suscríbete para recibir ofertas exclusivas y noticias de juegos.</p>
+        <input type="email" id="email" placeholder="Tu correo electrónico">
+        <button onclick="enviarCorreo()">Suscribirse</button>
+    </div>
+    <button class="back-button" onclick="volverAPaginaPrincipal()">Volver a Inicio</button>
+</body>
+</html>

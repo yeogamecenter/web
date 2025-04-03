@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeo Game Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #2c3e50, #000000);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+        #featured-games {
+            padding: 50px 20px;
+        }
+        .game {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 20px;
+            border-radius: 15px;
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .game:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        }
+        .game img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .game h3 {
+            margin: 10px 0;
+        }
+        .game button {
+            background: #ff5722;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .game button:hover {
+            background: #e64a19;
+        }
+        #contact {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 50px auto;
+            width: 50%;
+            border-radius: 10px;
+        }
+        #contact h2 {
+            color: #ff5722;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        #contact button {
+            background: #ff5722;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #contact button:hover {
+            background: #e64a19;
+        }
+    </style>
+    <script>
+        function jugarJuego(juego) {
+            window.location.href = juego + ".html";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Yeo Game Center</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="Noticias.html">Noticias</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="featured-games">
+        <h2>Juegos Destacados</h2>
+        <div class="game">
+            <img src="roblox.jpg" alt="Juego 1">
+            <h3>Roblox</h3>
+            <p>Plataforma de creación de juegos donde los jugadores pueden diseñar y jugar experiencias interactivas.</p>
+            <button onclick="jugarJuego('https://www.roblox.com/es/login?returnUrl=https%3A%2F%2Fwww.roblox.com%2Fes%2Flogin.html')">Jugar Ahora</button>
+        </div>
+        <div class="game">
+            <img src="amon1.jpg" alt="Juego 2">
+            <h3>Among us</h3>
+            <p> Juego multijugador de deducción social donde los jugadores deben descubrir al impostor antes de ser eliminados.
+
+</p>
+            <button onclick="jugarJuego('https://amongusplay.online/')">Jugar Ahora</button>
+        </div>
+        <div class="game">
+            <img src="call.jpg" alt="Juego 3">
+            <h3>Call of Duty</h3>
+            <p> Saga de disparos en primera persona con acción intensa, multijugador y campañas realistas de guerra.</p>
+            <button onclick="jugarJuego('https://www.callofduty.com/')">Jugar Ahora</button>
+        </div>
+    </section>
+
+    <section id="featured-games">
+        <div class="game">
+            <img src="fullg.jpg" alt="Juego 1">
+            <h3>Fall Guys</h3>
+            <p>Competencia estilo "humor amarillo" con pruebas de obstáculos y minijuegos caóticos.</p>
+            <button onclick="jugarJuego('https://www.fallguys.com/es-ES')">Jugar Ahora</button>
+        </div>
+        <div class="game">
+            <img src="gtav.jpg" alt="Juego 2">
+            <h3>GTA V</h3>
+            <p> Mundo abierto de crimen y acción en Los Santos, con historia envolvente y modo multijugador en línea.
+
+</p>
+            <button onclick="jugarJuego('https://www.rockstargames.com/gta-v')">Jugar Ahora</button>
+        </div>
+        <div class="game">
+            <img src="mario.jpg" alt="Juego 3">
+            <h3>Mario Kart</h3>
+            <p> Juego de carreras de karts con personajes de Nintendo y objetos para competir de forma divertida.</p>
+            <button onclick="jugarJuego('https://mariokart8.nintendo.com/')">Jugar Ahora</button>
+        </div>
+    </section>
+    <section id="featured-games">
+        <div class="game">
+            <img src="miner.jpg" alt="Juego 1">
+            <h3>Minecraft</h3>
+            <p>Mundo abierto de construcción y supervivencia donde puedes crear, explorar y luchar contra criaturas.</p>
+            <button onclick="jugarJuego('https://tlauncher.org/')">Jugar Ahora</button>
+        </div>
+        <div class="game">
+            <img src="league.jpg" alt="Juego 2">
+            <h3>League Legends</h3>
+            <p>: MOBA estratégico donde equipos de campeones luchan en batallas tácticas en línea.</p>
+            <button onclick="jugarJuego('https://www.leagueoflegends.com/en-us/')">Jugar Ahora</button>
+        </div>
+        <div class="game">
+            <img src="Fornite.jpg" alt="Juego 3">
+            <h3>Fortnite</h3>
+            <p>Battle Royale con construcción, acción y eventos en vivo con gráficos coloridos y dinámicos.</p>
+            <button onclick="jugarJuego('https://www.fortnite.com/?lang=en-US')">Jugar Ahora</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
+
